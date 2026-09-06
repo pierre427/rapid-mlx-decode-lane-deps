@@ -28,16 +28,16 @@ intentionally excluded (see README).
 
 ## Anonymization edits applied to this snapshot
 
-Five lines were altered from the source originals to remove
-internal identifiers. No logic was changed.
+Five lines were altered from the source originals to remove internal
+identifiers. No logic was changed.
 
 | File | Change |
 |---|---|
-| compiled_qualification.py | env-key filter prefix `MLXUAG_` -> `MLXPRIV_` |
-| models/qwen4_megakernel.py | dropped a contributor name from a code comment |
-| models/qwen4_megakernel_tune.py | default lock path -> `/tmp/mlx-megakernel/gpu.lock` |
-| models/qwen4_megakernel_tune.py | default cache path -> `~/.cache/mlx-megakernel/megakernel-tune.json` |
-| models/qwen4_megakernel_config.py | docstring cache path -> `~/.cache/mlx-megakernel/...` |
+| compiled_qualification.py | env-key filter prefix renamed to a neutral prefix (`MLXPRIV_`) |
+| models/qwen4_megakernel.py | removed a contributor name from a code comment |
+| models/qwen4_megakernel_tune.py | default GPU-lock path set to a neutral default (`/tmp/mlx-megakernel/gpu.lock`) |
+| models/qwen4_megakernel_tune.py | default tune-cache path set to a neutral default (`~/.cache/mlx-megakernel/megakernel-tune.json`) |
+| models/qwen4_megakernel_config.py | docstring tune-cache path updated to match |
 
-Verified: zero remaining matches for internal names, host addresses,
-home paths, or email across all included files.
+Verified: zero matches for internal names, host addresses, home paths, or
+email across all included files.
